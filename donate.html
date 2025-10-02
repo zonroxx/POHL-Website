@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate - Pacific Ombudsman for Humanitarian Law</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="../images/POHL-Logo.png" alt="POHL Logo">
+        <h1>Pacific Ombudsman for Humanitarian Law</h1>
+      </div>
+      <div class="social-links">
+        <span>Connect with Us:</span>
+        <a href="https://www.facebook.com/pacificombudsman" target="_blank" aria-label="Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <div class="nav-container">
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="founders.html">Founders</a></li>
+        <li><a href="partners.html">Partners</a></li>
+        <li><a href="activities.html">Activities</a></li>
+        <li><a href="contacts.html">Contacts</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="donate.html">Donate</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <img src="../images/donate.jpg" alt="Donate to POHL">
+    <div class="hero-overlay">
+      <div class="hero-text">
+        <h2>Support Our Mission</h2>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <div class="main-content">
+      <h1>Make a Donation</h1>
+
+      <div class="highlight-box">
+        <h2>The Pacific Ombudsman for Humanitarian Law is a 501(c)(3) Certified Organization</h2>
+        <p>Your donation is tax-deductible to the extent allowed by law. We are dedicated to providing legal, referral, and support services to victims of crime in the Pacific Region.</p>
+      </div>
+
+      <p>
+        Your generous donation helps us provide critical legal services and support to victims of domestic violence, sexual assault, human trafficking, and other crimes. Every contribution makes a difference in someone's life.
+      </p>
+
+      <div class="donation-methods">
+        <div class="donation-card">
+          <h3><i class="fas fa-university"></i> Donation by Bank</h3>
+          <div class="donation-info">
+            <strong>Account Name:</strong>
+            <p>Pacific Ombudsman for Humanitarian Law</p>
+          </div>
+          <div class="donation-info">
+            <strong>Checking Account Number:</strong>
+            <p>12-058616</p>
+          </div>
+          <div class="donation-info">
+            <strong>Bank Name:</strong>
+            <p>First Hawaiian Bank</p>
+          </div>
+          <div class="donation-info">
+            <strong>Bank Routing Number:</strong>
+            <p>121403065</p>
+          </div>
+          <div class="donation-info">
+            <strong>Bank Address:</strong>
+            <p>Oleai, P.O. Box 500625, Saipan, MP 96950, USA</p>
+          </div>
+        </div>
+
+        <div class="donation-card">
+          <h3><i class="fas fa-envelope"></i> Donation by Mail</h3>
+          <p style="margin-bottom: 1.5rem;">Send a check or money order to support our mission.</p>
+          <div class="donation-info">
+            <strong>Make the check payable to:</strong>
+            <p>Pacific Ombudsman for Humanitarian Law</p>
+          </div>
+          <div class="donation-info">
+            <strong>Mail it to:</strong>
+            <p>Suite 101, Marianas Business Plaza<br>
+            P.O. Box 5077<br>
+            Saipan, MP 96950, USA</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-box">
+        <h2>Contact Us About Your Donation</h2>
+        <p>If you have questions about making a donation or would like to discuss other ways to support our mission, please reach out to us.</p>
+
+        <form name="donationform" method="post" action="php/html_form_send.php">
+          <div class="form-group">
+            <label for="first_name">First Name *</label>
+            <input type="text" id="first_name" name="first_name" maxlength="50" required>
+          </div>
+
+          <div class="form-group">
+            <label for="last_name">Last Name *</label>
+            <input type="text" id="last_name" name="last_name" maxlength="50" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" maxlength="80" required>
+          </div>
+
+          <div class="form-group">
+            <label for="telephone">Telephone Number</label>
+            <input type="tel" id="telephone" name="telephone" maxlength="30">
+          </div>
+
+          <div class="form-group">
+            <label for="comments">Message *</label>
+            <textarea id="comments" name="comments" maxlength="1000" placeholder="Let us know how you'd like to help or if you have any questions about donations..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+
+      <div class="info-box-accent">
+        <h2>How Your Donation Helps</h2>
+        <ul>
+          <li>Provides free legal services to victims of domestic violence and human trafficking</li>
+          <li>Supports professional interpretation and translation services</li>
+          <li>Funds community outreach and education programs</li>
+          <li>Enables training and certification programs for survivors</li>
+          <li>Helps us expand services throughout the Pacific Region</li>
+        </ul>
+        <p><strong>Thank you for your support!</strong> Your generosity enables us to continue our vital work in the community.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p><strong>Pacific Ombudsman for Humanitarian Law</strong></p>
+      <p>Suite 101, Marianas Business Plaza, Saipan, MP 96950, USA</p>
+      <p>Phone: 670.234.9480 | Email: manager.pohlaw@gmail.com</p>
+      <p>&copy; 2025 POHL. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

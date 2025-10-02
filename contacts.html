@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Pacific Ombudsman for Humanitarian Law</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="../images/POHL-Logo.png" alt="POHL Logo">
+        <h1>Pacific Ombudsman for Humanitarian Law</h1>
+      </div>
+      <div class="social-links">
+        <span>Connect with Us:</span>
+        <a href="https://www.facebook.com/pacificombudsman" target="_blank" aria-label="Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <div class="nav-container">
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="founders.html">Founders</a></li>
+        <li><a href="partners.html">Partners</a></li>
+        <li><a href="activities.html">Activities</a></li>
+        <li><a href="contacts.html">Contacts</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="donate.html">Donate</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <img src="../images/banner5.jpg" alt="Contact POHL">
+    <div class="hero-overlay">
+      <div class="hero-text">
+        <h2>Contact Us</h2>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <div class="main-content">
+      <h1>Contact Us</h1>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3><i class="fas fa-map-marker-alt"></i> Office Location</h3>
+          <p>
+            <i class="fas fa-building"></i>
+            <span>Suite 101, Marianas Business Plaza<br>Saipan, MP 96950, USA</span>
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <h3><i class="fas fa-envelope"></i> Mailing Address</h3>
+          <p>
+            <i class="fas fa-mail-bulk"></i>
+            <span>P.O. Box 5077<br>Saipan, MP 96950, USA</span>
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <h3><i class="fas fa-phone"></i> Phone & Fax</h3>
+          <p>
+            <i class="fas fa-phone-alt"></i>
+            <span>Phone: 1670.234-9480, 81, and 82</span>
+          </p>
+          <p>
+            <i class="fas fa-fax"></i>
+            <span>Fax: 1670.234-9487</span>
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <h3><i class="fas fa-at"></i> Email</h3>
+          <p>
+            <i class="fas fa-envelope"></i>
+            <span><a href="mailto:manager.pohlaw@gmail.com">manager.pohlaw@gmail.com</a></span>
+          </p>
+        </div>
+      </div>
+
+      <div class="info-box">
+        <h2>Send Us a Message</h2>
+        <p>Fill out the form below and we'll get back to you as soon as possible.</p>
+
+        <form name="contactform" method="post" action="php/html_form_send.php">
+          <div class="form-group">
+            <label for="first_name">First Name *</label>
+            <input type="text" id="first_name" name="first_name" maxlength="50" required>
+          </div>
+
+          <div class="form-group">
+            <label for="last_name">Last Name *</label>
+            <input type="text" id="last_name" name="last_name" maxlength="50" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" maxlength="80" required>
+          </div>
+
+          <div class="form-group">
+            <label for="telephone">Telephone Number</label>
+            <input type="tel" id="telephone" name="telephone" maxlength="30">
+          </div>
+
+          <div class="form-group">
+            <label for="comments">Message *</label>
+            <textarea id="comments" name="comments" maxlength="1000" required></textarea>
+          </div>
+
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+
+      <div class="info-box-accent">
+        <h2>Office Hours</h2>
+        <p>Our friendly multi-national staff is available during regular business hours to assist you. We accommodate all types of clientele and provide language assistance in Chamorro, Carolinian, Palauan, and other languages.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p><strong>Pacific Ombudsman for Humanitarian Law</strong></p>
+      <p>Suite 101, Marianas Business Plaza, Saipan, MP 96950, USA</p>
+      <p>Phone: 670.234.9480 | Email: manager.pohlaw@gmail.com</p>
+      <p>&copy; 2025 POHL. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
