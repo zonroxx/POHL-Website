@@ -186,7 +186,7 @@ nav {
   padding: 0.5rem;
 }
 
-/* Hero Section */
+/* Hero Section - Default (for other pages) */
 .hero {
   position: relative;
   height: 450px;
@@ -216,6 +216,7 @@ nav {
   color: white;
   text-align: center;
   padding: 2rem;
+  max-width: 900px;
 }
 
 .hero-text h2 {
@@ -224,6 +225,130 @@ nav {
   font-weight: 400;
   text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
   letter-spacing: 1px;
+}
+
+/* Hero Section - Home Page Only */
+.hero-home {
+  background: linear-gradient(135deg, #07868c 0%, #055a5e 100%);
+  padding: 5rem 2rem;
+  height: auto;
+}
+
+.hero-home .hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.hero-home .hero-content {
+  color: white;
+}
+
+.hero-home .hero-badge {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 0.5rem 1.25rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+.hero-home .hero-content h2 {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-shadow: none;
+}
+
+.hero-home .hero-content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  opacity: 0.95;
+}
+
+.hero-home .hero-buttons {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hero-home .hero-buttons .btn {
+  background-color: var(--secondary);
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.hero-home .hero-buttons .btn:hover {
+  background-color: var(--accent);
+  color: var(--dark);
+}
+
+.hero-home .btn-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.hero-home .btn-link:hover {
+  gap: 0.75rem;
+  opacity: 0.9;
+}
+
+.hero-home .btn-link i {
+  font-size: 1.2rem;
+}
+
+.hero-home .hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-home .hero-image-circle {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid var(--secondary);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.hero-home .hero-image-circle::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+}
+
+.hero-home .hero-image-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 /* Main Content */
@@ -453,7 +578,7 @@ main {
 .partner-list,
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   margin: 2.5rem 0;
 }
@@ -675,7 +800,6 @@ main {
 .no-news i {
   font-size: 4rem;
   color: var(--gray-dark);
-  margin-bottom: 1.5rem;
 }
 
 .no-news h2 {
@@ -687,18 +811,30 @@ main {
   font-family: 'Segoe UI', Tahoma, sans-serif;
 }
 
-.no-news .btn {
-  display: inline;
-  padding: 0.6rem 1.5rem;
+.button-group {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
 }
 
+.button-group .btn {
+  min-width: 160px;
+  transition: all 0.3s ease;
+}
+
+.button-group .btn:hover {
+  transform: translateY(-2px);
+}
 /* Buttons */
 .btn {
   display: inline-block;
   padding: 0.9rem 2.5rem;
   background-color: var(--primary);
   color: white;
-  text-decoration: none;
+  text-decoration: none;;
   border-radius: 2px;
   border: none;
   font-size: 1rem;
@@ -710,10 +846,15 @@ main {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+.no-news .btn {
+  padding: 1rem 1.5rem;
+}
+
 .btn i {
   color: white;
   font-size: 1rem;
   margin-right: 0.5rem;
+  
 }
 
 .btn:hover {
@@ -879,7 +1020,7 @@ footer {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: var(--background);
+    background-color: var(--dark);
   }
 
   .nav-links.active {
@@ -901,6 +1042,40 @@ footer {
 
   .hero-text h2 {
     font-size: 2rem;
+  }
+
+  .hero-home {
+    padding: 3rem 1.5rem;
+  }
+
+  .hero-home .hero-container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .hero-home .hero-content {
+    text-align: center;
+  }
+
+  .hero-home .hero-badge {
+    display: inline-block;
+  }
+
+  .hero-home .hero-content h2 {
+    font-size: 2.2rem;
+  }
+
+  .hero-home .hero-content p {
+    max-width: 100%;
+  }
+
+  .hero-home .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-home .hero-image-circle {
+    width: 300px;
+    height: 300px;
   }
 
   main {
@@ -953,6 +1128,55 @@ footer {
 
   .social-links a {
     font-size: 1.1rem;
+  }
+
+  .hero-home {
+    padding: 2.5rem 1rem;
+  }
+
+  .hero-home .hero-container {
+    gap: 2rem;
+  }
+
+  .hero-home .hero-badge {
+    font-size: 0.75rem;
+    padding: 0.4rem 1rem;
+  }
+
+  .hero-home .hero-content h2 {
+    font-size: 1.75rem;
+    line-height: 1.3;
+  }
+
+  .hero-home .hero-content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.75rem;
+  }
+
+  .hero-home .hero-image-circle {
+    width: 220px;
+    height: 220px;
+    border-width: 8px;
+  }
+
+  .hero-home .hero-buttons {
+    gap: 0.75rem;
+    flex-direction: column;
+  }
+
+  .hero-home .hero-buttons .btn {
+    padding: 0.9rem 1.75rem;
+    font-size: 0.9rem;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .hero-home .btn-link {
+    font-size: 0.9rem;
+    justify-content: center;
+    width: 100%;
+    max-width: 300px;
   }
 
   main {
