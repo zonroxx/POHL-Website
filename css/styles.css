@@ -446,16 +446,10 @@ nav {
   border-radius: 50%;
   overflow: hidden;
   border: 8px solid rgba(0, 0, 0, 0.3);
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4),
-              0 10px 40px rgba(255, 148, 37, 0.2);
   position: relative;
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.hero-home .hero-image-circle:hover {
-  transform: scale(1.03);
-  border-color: rgba(255, 148, 37, 0.5);
-}
 
 .hero-home .hero-image-circle::before {
   content: '';
@@ -464,7 +458,6 @@ nav {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.15) 0%, transparent 60%);
   pointer-events: none;
   z-index: 1;
 }
@@ -485,6 +478,7 @@ nav {
 main {
   max-width: 1200px;
   margin: 4rem auto;
+  margin-top: 6rem;
   padding: 0 2rem;
 }
 
@@ -1088,7 +1082,6 @@ footer {
   padding: 4rem 0 3rem;
   margin-top: 6rem;
   text-align: center;
-  border-top: 4px solid var(--primary);
   position: relative;
 }
 
@@ -1561,28 +1554,9 @@ html {
   animation: scaleRotate 20s ease-in-out infinite;
 }
 
-/* Abstract Justice Pillar */
-.hero-home::after {
-  content: '';
-  position: absolute;
-  left: -100px;
-  bottom: -100px;
-  width: 300px;
-  height: 500px;
-  background: linear-gradient(45deg, rgba(255, 148, 37, 0.1), transparent);
-  transform: skewY(-5deg);
-  pointer-events: none;
-  animation: pillarShift 15s ease-in-out infinite;
-}
-
 @keyframes scaleRotate {
   0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.6; }
   50% { transform: scale(1.1) rotate(180deg); opacity: 0.8; }
-}
-
-@keyframes pillarShift {
-  0%, 100% { transform: skewY(-5deg) translateX(0); }
-  50% { transform: skewY(-3deg) translateX(20px); }
 }
 
 /* Letter-spacing Reveal Animation for Hero Title */
@@ -1613,15 +1587,15 @@ main {
   position: relative;
 }
 
-main::before {
-  content: '';
+.home-main::before {
+  content: ' ';
   position: absolute;
-  top: -80px;
+  top: -60px;
   left: 0;
-  right: 0;
-  height: 150px;
-  background: var(--background);
-  clip-path: polygon(0 80px, 100% 0, 100% 150px, 0 150px);
+  right: 25rem;
+  height: 130px;
+  background: var(--gray-light);
+  clip-path: polygon(0 60px, 91% 0, 87% 150px, 0 150px);
   z-index: -1;
 }
 
