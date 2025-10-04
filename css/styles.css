@@ -550,6 +550,7 @@ main {
 
 /* Sidebar */
 .sidebar {
+  margin-top: 5rem;
   background: var(--gray-light);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(7, 134, 140, 0.1);
@@ -558,6 +559,11 @@ main {
   height: fit-content;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
 }
+
+.home .sidebar {
+  margin-top: 0rem;
+}
+
 
 .sidebar-section {
   margin-bottom: 2.5rem;
@@ -1626,18 +1632,6 @@ main::before {
   z-index: auto;
 }
 
-/* Diagonal Accent Bar for Headings */
-.main-content h1::before {
-  content: '';
-  position: absolute;
-  left: -2rem;
-  top: 50%;
-  width: 4px;
-  height: 120%;
-  background: linear-gradient(180deg, var(--primary), var(--secondary));
-  transform: translateY(-50%) skewY(-3deg);
-}
-
 
 /* Overlapping 3D Card Layout */
 .card-grid {
@@ -1891,7 +1885,7 @@ footer::before {
 }
 
 /* Drop Cap for First Paragraph */
-.main-content p:first-of-type::first-letter {
+.firstletterbig p:first-of-type::first-letter {
   font-size: 3.5em;
   font-family: 'Playfair Display', serif;
   font-weight: 700;
