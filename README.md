@@ -1,6 +1,6 @@
 # Pacific Ombudsman for Humanitarian Law (POHL) Website
 
-Modern remake of the POHL non-profit organization website.
+link: https://zonroxx.github.io/POHL-Website/index.html
 
 ## Overview
 
@@ -62,38 +62,13 @@ New/
 ├── js/
 │   └── main.js
 ├── images/
-│   └── [various images from original site]
+│   └── [images]
 └── README.md
 ```
 
-## Getting Started
-
-1. Simply open `index.html` in a web browser to view the site locally
-2. For deployment to GitHub Pages:
-   - Create a new repository on GitHub
-   - Upload all files from the `New` folder
-   - Enable GitHub Pages in repository settings
-   - Select the main branch as source
-
-## Form Functionality
-
-The contact and donation forms currently use a placeholder action (`php/html_form_send.php`). For production:
-
-1. Set up a backend form handler (PHP, Node.js, etc.)
-2. Or use a form service like Formspree, Netlify Forms, or similar
-3. Update the `action` attribute in the forms
-
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers (iOS Safari, Chrome Mobile)
-
 ## License
 
-© 2024 Pacific Ombudsman for Humanitarian Law. All rights reserved.
+© 2025 Pacific Ombudsman for Humanitarian Law. All rights reserved.
 
 ## Contact
 
