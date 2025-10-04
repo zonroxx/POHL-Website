@@ -170,6 +170,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Signature diagonal section reveals
   const sections = document.querySelectorAll('main > *');
+  const isMobileView = window.innerWidth < 768;
+  const isSmallMobileView = window.innerWidth < 480;
+
   const sectionObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry, index) => {
       if (entry.isIntersecting) {
@@ -177,13 +180,28 @@ document.addEventListener('DOMContentLoaded', function() {
         entry.target.style.transform = 'translateX(0) skewX(0)';
       }
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -100px 0px' });
+  }, {
+    threshold: isSmallMobileView ? 0.05 : 0.1,
+    rootMargin: isSmallMobileView ? '0px 0px 50px 0px' : '0px 0px -100px 0px'
+  });
 
   sections.forEach((section, index) => {
     if (!section.classList.contains('hero-home')) {
       section.style.opacity = '0';
-      section.style.transform = index % 2 === 0 ? 'translateX(-50px) skewX(-2deg)' : 'translateX(50px) skewX(2deg)';
-      section.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+
+      // Reduce transform on mobile to prevent overflow
+      const translateAmount = isSmallMobileView ? 20 : (isMobileView ? 30 : 50);
+      const skewAmount = isSmallMobileView ? 0 : (isMobileView ? -1 : -2);
+
+      section.style.transform = index % 2 === 0
+        ? `translateX(-${translateAmount}px) skewX(${skewAmount}deg)`
+        : `translateX(${translateAmount}px) skewX(${-skewAmount}deg)`;
+
+      // Faster transition on mobile
+      section.style.transition = isMobileView
+        ? 'all 0.5s ease-out'
+        : 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+
       sectionObserver.observe(section);
     }
   });
