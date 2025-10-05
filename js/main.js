@@ -140,6 +140,8 @@ document.addEventListener('DOMContentLoaded', function() {
   // Card parallax effect (subtle)
   const cards = document.querySelectorAll('.card');
   cards.forEach(card => {
+    card.style.willChange = 'transform';
+
     card.addEventListener('mousemove', function(e) {
       const rect = this.getBoundingClientRect();
       const x = e.clientX - rect.left;
@@ -148,8 +150,8 @@ document.addEventListener('DOMContentLoaded', function() {
       const centerX = rect.width / 2;
       const centerY = rect.height / 2;
 
-      const rotateX = (y - centerY) / 20;
-      const rotateY = (centerX - x) / 20;
+      const rotateX = (centerY - y) / 50;
+      const rotateY = (x - centerX) / 50;
 
       this.style.transform = `translateY(-8px) perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
     });

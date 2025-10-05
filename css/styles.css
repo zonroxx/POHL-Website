@@ -2,7 +2,7 @@
   --text: #021815;
   --text-light: #fef8fa;
   --background: #f8fffc;
-  --primary: #07868c;/* #ea2d55 */
+  --primary: #0aa5ad;/* #ea2d55 */
   --secondary: #ff9425; /*#f3c088 */
   --accent: #eed454;
   --gray-light: #e4f1f1;
@@ -17,8 +17,8 @@ body.dark-mode {
   --text: #e8f5f3;
   --text-light: #021815;
   --background: #1a1a1a;
-  --primary: #0aa5ad;
-  --secondary: #ffb84d;
+  --primary: #13b37e;
+  --secondary: #9cb43b;
   --accent: #f4e67c;
   --gray-light: #2a2a2a;
   --gray-medium: #404040;
@@ -645,7 +645,7 @@ main {
   border-radius: 16px;
   padding: 3rem 2.5rem;
   text-align: center;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0s;
   box-shadow: 0 4px 20px rgba(7, 134, 140, 0.15),
               0 1px 3px rgba(0, 0, 0, 0.08);
   position: relative;
